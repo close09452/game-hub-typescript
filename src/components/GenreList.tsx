@@ -12,10 +12,10 @@ import getCropoedImageUrl from "../services/image-url";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
-  selectedGenre: Genre | null;
+  selectedGenreId: Genre | null;
 }
 
-const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
+const GenreList = ({ onSelectGenre, selectedGenreId: selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenre();
   if (error) return null;
   if (isLoading) return <Spinner />;
