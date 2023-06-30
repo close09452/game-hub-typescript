@@ -14,7 +14,7 @@ const GameTrailer = ({ gameId }: Props) => {
 
   if (error) throw error;
 
-  return <video src={first?.data[480]} poster={first?.prview} controls />;
+  return first ? <video src={first?.data[480]} poster={first?.prview} controls /> : null;
 };
 
 export default GameTrailer;
